@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Личный кабинет — Nova</title>
+  <meta name="robots" content="noindex" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="bg-glow bg-glow--1"></div>
+  <div class="bg-glow bg-glow--2"></div>
+
+  <header class="header">
+    <nav class="container nav">
+      <a href="index.html" class="logo"><span class="logo__icon">◆</span> Nova</a>
+      <div class="nav__right">
+        <a href="index.html#pricing" class="nav__link">Тарифы</a>
+        <div class="user-chip">
+          <span class="user-chip__avatar" id="userAvatar">?</span>
+          <span class="user-chip__name" id="userName">Загрузка…</span>
+        </div>
+        <button type="button" class="btn btn--ghost btn--small" id="logoutBtn">Выйти</button>
+      </div>
+    </nav>
+  </header>
+
+  <main class="page container">
+    <div class="page__head">
+      <div>
+        <h1>Личный кабинет</h1>
+        <p class="panel__muted" id="welcome">Загружаем данные…</p>
+      </div>
+      <a href="index.html#pricing" class="btn btn--ghost btn--small">Все тарифы</a>
+    </div>
+
+    <div class="alert alert--warn" id="paymentBanner" hidden>
+      <strong>Онлайн-оплата не настроена.</strong>
+      Чтобы принимать платежи, укажите <code>YOOKASSA_SHOP_ID</code> и <code>YOOKASSA_SECRET_KEY</code>
+      в файле <code>.env</code> и перезапустите сервер. Аккаунты и проекты работают уже сейчас.
+    </div>
+
+    <div class="account-grid">
+      <section class="panel">
+        <div class="panel__head">
+          <h2>Подписка</h2>
+          <span class="badge-plan" id="planBadge">—</span>
+        </div>
+        <p class="panel__muted" id="planStatus">Загрузка…</p>
+        <div class="plan-actions" id="planActions"></div>
+      </section>
+
+      <section class="panel">
+        <div class="panel__head">
+          <h2>Проекты</h2>
+          <span class="panel__muted" id="projectCount"></span>
+        </div>
+        <form class="project-form" id="projectForm">
+          <input type="text" id="projectName" maxlength="80" placeholder="Название проекта" required />
+          <textarea id="projectDesc" maxlength="500" placeholder="Короткое описание (необязательно)"></textarea>
+          <button type="submit" class="btn btn--primary btn--small" id="projectSubmit">Создать проект</button>
+        </form>
+        <div class="project-list" id="projectList"></div>
+      </section>
+    </div>
+
+    <section class="panel">
+      <div class="panel__head">
+        <h2>История платежей</h2>
+      </div>
+      <div class="table-wrap">
+        <table class="orders">
+          <thead>
+            <tr>
+              <th>Дата</th>
+              <th>Тариф</th>
+              <th>Сумма</th>
+              <th>Статус</th>
+              <th></th>
+            </tr>
+          </thead>
+          <tbody id="ordersBody"></tbody>
+        </table>
+      </div>
+      <p class="empty" id="ordersEmpty" hidden>Платежей пока нет — самое время выбрать тариф.</p>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer__inner">
+      <span>© 2026 Nova</span>
+      <div class="footer__links">
+        <a href="index.html">Главная</a>
+        <a href="index.html#pricing">Тарифы</a>
+      </div>
+    </div>
+  </footer>
+
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+  <script src="api.js"></script>
+  <script src="account.js"></script>
+</body>
+</html>

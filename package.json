@@ -1,0 +1,14 @@
+{
+  "name": "nova-site",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Nova — лендинг с аккаунтами, подписками и оплатой",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "test": "node tests/smoke.js && node tests/smoke-nokeys.js"
+  },
+  "engines": {
+    "node": ">=22.5"
+  }
+}

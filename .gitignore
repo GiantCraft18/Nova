@@ -1,0 +1,19 @@
+# Зависимости
+node_modules/
+
+# Секреты
+.env
+.env.local
+
+# База данных и логи
+data/
+*.db
+*.db-wal
+*.db-shm
+*.log
+
+# Служебные файлы ОС и редакторов
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/

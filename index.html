@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Nova — технологии будущего</title>
+  <meta name="description" content="Nova — современный лендинг о технологиях будущего" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <!-- Фоновое свечение -->
+  <div class="bg-glow bg-glow--1"></div>
+  <div class="bg-glow bg-glow--2"></div>
+
+  <!-- Шапка -->
+  <header class="header" id="header">
+    <nav class="container nav">
+      <a href="#" class="logo">
+        <span class="logo__icon">◆</span> Nova
+      </a>
+      <ul class="nav__links" id="navLinks">
+        <li><a href="#features">Возможности</a></li>
+        <li><a href="#stats">Цифры</a></li>
+        <li><a href="#pricing">Тарифы</a></li>
+        <li><a href="#contact">Контакты</a></li>
+      </ul>
+      <a href="login.html?mode=register" class="btn btn--small nav__cta" id="navCta">Начать</a>
+      <button class="burger" id="burger" aria-label="Меню">
+        <span></span><span></span><span></span>
+      </button>
+    </nav>
+  </header>
+
+  <main>
+    <!-- Hero -->
+    <section class="hero container">
+      <div class="hero__badge reveal">🚀 Новое поколение уже здесь</div>
+      <h1 class="hero__title reveal">
+        Создавай будущее<br />
+        <span class="gradient-text">вместе с Nova</span>
+      </h1>
+      <p class="hero__subtitle reveal">
+        Платформа, которая объединяет искусственный интеллект, скорость и
+        простоту. Запусти свой проект за считанные минуты.
+      </p>
+      <div class="hero__actions reveal">
+        <a href="login.html?mode=register" class="btn btn--primary">Попробовать бесплатно</a>
+        <a href="#features" class="btn btn--ghost">Узнать больше ↓</a>
+      </div>
+
+      <div class="hero__preview reveal">
+        <div class="window">
+          <div class="window__bar">
+            <span></span><span></span><span></span>
+          </div>
+          <div class="window__body">
+            <pre><code><span class="code-purple">import</span> { Nova } <span class="code-purple">from</span> <span class="code-green">'@nova/ai'</span>;
+
+<span class="code-purple">const</span> app = <span class="code-purple">new</span> <span class="code-yellow">Nova</span>();
+app.<span class="code-yellow">launch</span>(); <span class="code-comment">// 🚀 готово!</span></code></pre>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Возможности -->
+    <section class="section container" id="features">
+      <h2 class="section__title reveal">Почему <span class="gradient-text">Nova</span>?</h2>
+      <p class="section__subtitle reveal">Всё, что нужно для быстрого старта</p>
+      <div class="cards">
+        <div class="card reveal">
+          <div class="card__icon">⚡</div>
+          <h3>Молниеносная скорость</h3>
+          <p>Отклик менее 50 мс. Твой проект работает быстрее, чем ты моргаешь.</p>
+        </div>
+        <div class="card reveal">
+          <div class="card__icon">🤖</div>
+          <h3>ИИ из коробки</h3>
+          <p>Встроенные модели машинного обучения — просто подключи и используй.</p>
+        </div>
+        <div class="card reveal">
+          <div class="card__icon">🔒</div>
+          <h3>Безопасность</h3>
+          <p>Шифрование на уровне банков. Твои данные под надёжной защитой.</p>
+        </div>
+        <div class="card reveal">
+          <div class="card__icon">🎨</div>
+          <h3>Красивый дизайн</h3>
+          <p>Готовые компоненты в современном стиле. Никакого скучного интерфейса.</p>
+        </div>
+        <div class="card reveal">
+          <div class="card__icon">🌍</div>
+          <h3>Глобальный CDN</h3>
+          <p>Серверы по всему миру — контент доставляется мгновенно везде.</p>
+        </div>
+        <div class="card reveal">
+          <div class="card__icon">🛠️</div>
+          <h3>Простая интеграция</h3>
+          <p>Подключение за 3 строчки кода. Документация, которую приятно читать.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Статистика -->
+    <section class="section container" id="stats">
+      <div class="stats reveal">
+        <div class="stat">
+          <div class="stat__number" data-target="120000">0</div>
+          <div class="stat__label">разработчиков</div>
+        </div>
+        <div class="stat">
+          <div class="stat__number" data-target="99">0</div>
+          <div class="stat__label">% аптайм</div>
+        </div>
+        <div class="stat">
+          <div class="stat__number" data-target="50">0</div>
+          <div class="stat__label">мс отклик</div>
+        </div>
+        <div class="stat">
+          <div class="stat__number" data-target="24">0</div>
+          <div class="stat__label">/7 поддержка</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Тарифы -->
+    <section class="section container" id="pricing">
+      <h2 class="section__title reveal">Выбери свой <span class="gradient-text">тариф</span></h2>
+      <p class="section__subtitle reveal">Начни бесплатно, расти без ограничений</p>
+      <div class="pricing">
+        <div class="plan reveal">
+          <h3>Старт</h3>
+          <div class="plan__price">0 ₽<span>/мес</span></div>
+          <ul>
+            <li>✓ 3 проекта</li>
+            <li>✓ 10 000 запросов</li>
+            <li>✓ Поддержка сообщества</li>
+          </ul>
+          <a href="login.html?mode=register" class="btn btn--ghost btn--full">Начать бесплатно</a>
+        </div>
+        <div class="plan plan--featured reveal">
+          <div class="plan__badge">Популярный</div>
+          <h3>Про</h3>
+          <div class="plan__price">990 ₽<span>/мес</span></div>
+          <ul>
+            <li>✓ Безлимит проектов</li>
+            <li>✓ 1 млн запросов</li>
+            <li>✓ ИИ-функции</li>
+            <li>✓ Приоритетная поддержка</li>
+          </ul>
+          <a href="account.html?plan=pro" class="btn btn--primary btn--full">Оплатить 990 ₽</a>
+        </div>
+        <div class="plan reveal">
+          <h3>Бизнес</h3>
+          <div class="plan__price">4 990 ₽<span>/мес</span></div>
+          <ul>
+            <li>✓ Всё из «Про»</li>
+            <li>✓ Выделенный сервер</li>
+            <li>✓ SLA 99.99%</li>
+            <li>✓ Персональный менеджер</li>
+          </ul>
+          <a href="account.html?plan=business" class="btn btn--ghost btn--full">Оплатить 4 990 ₽</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Контакты -->
+    <section class="section container" id="contact">
+      <div class="cta reveal">
+        <h2>Готов начать?</h2>
+        <p>Создай аккаунт — бесплатный тариф «Старт» подключится сразу</p>
+        <form class="cta__form" id="ctaForm">
+          <input type="email" id="ctaEmail" placeholder="твой@email.ru" required />
+          <button type="submit" class="btn btn--primary">Создать аккаунт</button>
+        </form>
+        <p class="cta__note">Уже есть аккаунт? <a href="login.html">Войти</a></p>
+      </div>
+    </section>
+  </main>
+
+  <!-- Подвал -->
+  <footer class="footer">
+    <div class="container footer__inner">
+      <span>© 2026 Nova. Сделано с ❤️</span>
+      <div class="footer__links">
+        <a href="#">Telegram</a>
+        <a href="#">GitHub</a>
+        <a href="#">YouTube</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="api.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

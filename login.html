@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Вход — Nova</title>
+  <meta name="robots" content="noindex" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="bg-glow bg-glow--1"></div>
+  <div class="bg-glow bg-glow--2"></div>
+
+  <header class="header">
+    <nav class="container nav">
+      <a href="index.html" class="logo"><span class="logo__icon">◆</span> Nova</a>
+      <a href="index.html" class="btn btn--ghost btn--small">На главную</a>
+    </nav>
+  </header>
+
+  <main class="page container">
+    <div class="auth">
+      <aside class="auth__aside">
+        <span class="hero__badge">Личный кабинет</span>
+        <h2>Твой доступ<br />к <span class="gradient-text">Nova</span></h2>
+        <ul class="auth__list">
+          <li>✓ Бесплатный тариф сразу после регистрации</li>
+          <li>✓ Оплата картой или СБП через ЮKassa</li>
+          <li>✓ Проекты и история платежей в одном месте</li>
+        </ul>
+      </aside>
+
+      <section class="auth__card">
+        <div class="tabs" role="tablist">
+          <button type="button" class="tab tab--active" data-mode="login">Вход</button>
+          <button type="button" class="tab" data-mode="register">Регистрация</button>
+        </div>
+
+        <h1 class="auth__title" id="authTitle">Вход в Nova</h1>
+        <p class="auth__subtitle" id="authSubtitle">Введите email и пароль, чтобы продолжить.</p>
+
+        <div class="alert" id="authError" hidden></div>
+
+        <form id="authForm" novalidate>
+          <label class="field field--register" hidden>
+            <span>Имя</span>
+            <input type="text" id="name" autocomplete="name" maxlength="60" placeholder="Как вас зовут" />
+          </label>
+
+          <label class="field">
+            <span>Email</span>
+            <input type="email" id="email" autocomplete="email" maxlength="254" placeholder="you@example.com" required />
+          </label>
+
+          <label class="field">
+            <span>Пароль</span>
+            <input type="password" id="password" autocomplete="current-password" minlength="8" maxlength="200" placeholder="Минимум 8 символов" required />
+          </label>
+
+          <button type="submit" class="btn btn--primary btn--full" id="submitBtn">Войти</button>
+        </form>
+
+        <p class="auth__hint" id="authHint">Нет аккаунта? <button type="button" class="link-btn" data-mode="register">Зарегистрироваться</button></p>
+      </section>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer__inner">
+      <span>© 2026 Nova</span>
+      <div class="footer__links">
+        <a href="index.html#pricing">Тарифы</a>
+        <a href="index.html">Главная</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="api.js"></script>
+  <script src="login.js"></script>
+</body>
+</html>
